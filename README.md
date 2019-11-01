@@ -25,7 +25,6 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-
 |name|text|null: false|
 ### Association
 - has_many :posts

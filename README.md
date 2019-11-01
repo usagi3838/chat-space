@@ -1,19 +1,21 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false , foreign_key: true|
 |nickname|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
 ### Association
 - has_many :posts
 - has_many :groups, through: :group_user
+- has_many :group_users
 
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|body|text|null: false|
+|group_id|integer|null: false, foreign_key: true|
+|body|text||
+|images|string||
 |created_time|integer|null: false|
 |updated_time|integer|null: false|
 ### Association
@@ -23,11 +25,12 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false, foreign_key: true|
-|group_name|text|null: false|
+
+|name|text|null: false|
 ### Association
 - has_many :posts
 - has_many :users, through: :group_user
+- has_many :group_users
 
 ## group_userテーブル
 |Column|Type|Options|

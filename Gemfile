@@ -55,3 +55,4 @@ end
 # hamlの導入、erbファイルのHaml変換  
   gem 'haml-rails'
   gem 'font-awesome-sass', '~> 5.4.1'
+  gem 'devise'

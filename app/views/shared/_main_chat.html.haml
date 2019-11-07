@@ -2,31 +2,24 @@
   .main-header
     .main-header__group
       %p.main-header__group--name
-        グループ１
+        = @group.name
       %p.main-header__group--member
-        Member : satou , katou , taichi
+        Member :
+        - @group.users.each do |user|
+          = user.name
     .main-header__edit
-      = link_to root_path do
+      = link_to edit_group_path(@group) do
         Edit
 
   .messages
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker
-          talker
-        %p.message__upper-info__date
-          投稿日時
-      .message__lower-info
-        %p.message__lower-info__text
-          投稿内容
-
+    = render @messages
 
   .form
-    .form__input
-      %input.form__input--text{placeholder: "type a message",value: ""}
-      %input.form__input--file{type: "file",value: ""}
-      .form__input--far
-        %a
-          %i.far.fa-image
-      .form__input--btn
-        Send
+    = form_for [@group, @message] do |f|
+      .form__input
+        = f.text_field :content, class: 'form__input--text', placeholder: 'type a message'
+        = f.label :image, class: 'form__mask__image' do
+          .form__input--far
+            %i.far.fa-image
+            = f.file_field :image, class: 'form__input--file'
+          = f.submit 'Send', class: 'form__input--btn'

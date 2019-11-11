@@ -10,6 +10,7 @@ $(function() {
                         </div>
                         <div class="message__upper-info__date">
                         ${message.date}
+                        ${message.date}
                         </div>
                       </div>
                     <div class="message__lower-info">
@@ -26,7 +27,7 @@ $(function() {
     let url =  $(this).attr("action");
     $.ajax({
       type: 'POST',
-      url: url,
+      url: url, 
       data: formData,
       dataType: 'json',
       processData: false,

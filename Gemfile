@@ -68,8 +68,8 @@ end
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # hamlの導入、erbファイルのHaml変換  
   gem 'haml-rails'
-  # gem 'font-awesome-sass', '~> 5.4.1'
-  # gem "sassc", "2.2.1"
+  gem 'font-awesome-sass', '~> 5.4.1'
+  gem "sassc", "2.2.1"
   gem 'devise'
   gem 'carrierwave'
   gem 'mini_magick'

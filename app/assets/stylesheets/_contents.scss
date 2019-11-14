@@ -47,7 +47,6 @@
     font-weight:bold;
     color: #FFFFFF;
     margin-bottom:5px;
-    text-decoration: none;
   }
 
   .group__message {
@@ -55,7 +54,6 @@
     font-weight:bold;
     color: #FFFFFF;
     margin-bottom:40px;
-    text-decoration: none;
   }
 // .group__message
   i {
@@ -65,8 +63,6 @@
   i:visited {
     color:white;
   }
-
-
   
   .chat-main {
     width: calc(100vw - 300px);
@@ -195,4 +191,8 @@
   .fa-image {
     font-size:30px;
     color:black;
+  }
+
+  a {
+    text-decoration: none;
   }

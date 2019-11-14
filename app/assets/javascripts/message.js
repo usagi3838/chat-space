@@ -1,5 +1,5 @@
-if (window.location.href.match(/\/groups\/\d+\/messages/)){
-  $(document).on('turbolinks:load', function() {
+$(document).on('turbolinks:load', function() {
+  if (window.location.href.match(/\/groups\/\d+\/messages/)){
 
       function buildMessage(message){
         let content = message.content? `<div class = 'message__lower-info__text'>${message.content}</div>` : "";
@@ -70,5 +70,5 @@ if (window.location.href.match(/\/groups\/\d+\/messages/)){
       });
     };
     setInterval(reloadMessages, 5000);
-  });
-};
+  };
+});

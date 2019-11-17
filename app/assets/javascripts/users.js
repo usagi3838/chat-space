@@ -63,7 +63,8 @@ $(document).on('turbolinks:load', function() {
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this).parent().remove();
-    addDeleteUser(userName, userId);
+    $('.js-add-user').off('click.hidden');
+    $('.js-add-user').on('click.hidden',addDeleteUser(userName, userId));
     addMember(userId);
   });
   

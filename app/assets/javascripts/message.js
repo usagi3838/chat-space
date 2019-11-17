@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function() {
+$(function() {
   if (window.location.href.match(/\/groups\/\d+\/messages/)){
 
       function buildMessage(message){

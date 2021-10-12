@@ -43,7 +43,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
   # Use Puma as the app server
-  gem 'puma', '~> 3.0'
+  gem 'puma', '~> 4.3'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
